@@ -7,7 +7,7 @@ module Cosmos
   # item returns the overriden value. Methods are prefixed with underscores
   # so the API can include the original name which calls out to these
   # methods. Clearing the override requires calling normalize_tlm.
-  class CFDPProtocol < Protocol
+  class CfdpProtocol < Protocol
 
     # @param allow_empty_data [true/false] Whether STOP should be returned on empty data
     def initialize(allow_empty_data = false)
