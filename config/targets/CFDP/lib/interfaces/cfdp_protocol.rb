@@ -35,9 +35,7 @@ module Cosmos
         unless cfdpTask.break
 
           cfdpTask.update_received_counter(pdu.pduPayload.class) unless cfdpTask.nil?
-          Thread.new do
-            CFDP::CFDPEngine.instance.handlePDUReceived(packetPayload.bytes)
-          end
+          CFDP::CFDPEngine.instance.handlePDUReceived(packetPayload.bytes)
         end
       end
 
